@@ -1,1 +1,11 @@
+/result
+/source
 *.elc
+/.eldev
+/.cache/vale/*
+!/.cache/vale/Vocab/
+/.cache/vale/Vocab/*
+!/.cache/vale/Vocab/elisp-reader/
+/.local/state/project-manager/
+/.local/state/nix/profiles/
+/.cache/direnv/

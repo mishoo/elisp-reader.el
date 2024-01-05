@@ -1,0 +1,15 @@
+;; -*- mode: emacs-lisp; lexical-binding: t; -*-
+
+(require 'eldev)
+
+(setq
+  ;; run all linters by default
+  eldev-lint-default t
+  ;; and disable the ‘elisp-lint’ validators that are already covered by
+  ;; ‘eldev-lint’ (see ‘eldev-linter-elisp’).
+  elisp-lint-ignored-validators '("checkdoc" "package-lint"))
+
+;; Allow `read-symbol-shorthands` to work (see purcell/package-lint#238).
+(eval-after-load 'package-lint
+  '(add-to-list 'package-lint--allowed-prefix-mappings
+     '("elisp-reader" . ("er"))))
