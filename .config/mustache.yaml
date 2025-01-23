@@ -1,0 +1,8 @@
+project:
+  description: >-
+    This makes it possible to define syntax extensions, similar to what can
+    be done in Common Lisp with `set-macro-character`.
+  name: "elisp-reader"
+  repo: "sellout/elisp-reader.el"
+  summary: "A custom Lisp reader written in Elisp"
+type: { name: "emacs-lisp" }
